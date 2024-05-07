@@ -1,5 +1,6 @@
-![image](https://github.com/hemu07/CICD-project/assets/90203539/dc300e66-9c40-4e5a-8408-1f3f6f342553)# CICD-project
+# CICD-project
 Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Helm and Kubernetes
+
 
 ![image](https://github.com/hemu07/CICD-project/assets/90203539/bebf6e54-50d8-4caa-88f8-ca79ba94b968)
 

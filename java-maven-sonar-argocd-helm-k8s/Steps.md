@@ -44,4 +44,9 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
 
 - now configure all the CI steps in jenkinsfile
 - create jenkins pipeline (from SCM)
+- build the CI pipeline & image should be pushed to docker hub repo
+  ![image](https://github.com/hemu07/CICD-project/assets/90203539/c9d45099-367e-4f3e-b7f8-3a3abce0c46d)
+  ![image](https://github.com/hemu07/CICD-project/assets/90203539/61408869-adc5-4cb5-b7ae-42d489f14599)
+  ![image](https://github.com/hemu07/CICD-project/assets/90203539/c7cea1f3-8103-4dfa-81a2-675220572bdc)
+
   

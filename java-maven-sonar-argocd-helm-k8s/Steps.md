@@ -31,9 +31,12 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
   - ![image](https://github.com/hemu07/CICD-project/assets/90203539/93af5b54-973c-4767-90c4-f6fb4ec881b6)
  
   - access sonarqube on port 9000 (admin:admin) is the default username & password
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/a780d9f3-ea7d-4d13-95ff-86004f0bc8aa)
+
   - configure jenkins to use sonarqube
     - go to Myaccount --> security --> generate token -- copy it
-    - ![image](https://github.com/hemu07/CICD-project/assets/90203539/3b89702a-6eae-49cb-9fa9-46155590a511)
+      ![image](https://github.com/hemu07/CICD-project/assets/90203539/6e518fe2-3e31-43d2-92f9-c21790dd08eb)
+
     - add the token in credentials of jenkins
    
     - open kubernetes on docker desktop locally -- install argocd controller from operator hub - "https://operatorhub.io/operator/argocd-operator"
@@ -42,11 +45,27 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
     - start the controller
       ![image](https://github.com/hemu07/CICD-project/assets/90203539/27913ec3-a484-45ef-9109-a1ad37dd4df6)
 
-- now configure all the CI steps in jenkinsfile
-- create jenkins pipeline (from SCM)
-- build the CI pipeline & image should be pushed to docker hub repo
-  ![image](https://github.com/hemu07/CICD-project/assets/90203539/c9d45099-367e-4f3e-b7f8-3a3abce0c46d)
-  ![image](https://github.com/hemu07/CICD-project/assets/90203539/61408869-adc5-4cb5-b7ae-42d489f14599)
-  ![image](https://github.com/hemu07/CICD-project/assets/90203539/c7cea1f3-8103-4dfa-81a2-675220572bdc)
+  - now configure all the CI steps in jenkinsfile
+  - create jenkins pipeline (from SCM)
+  - build the CI pipeline & image should be pushed to docker hub repo
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/c9d45099-367e-4f3e-b7f8-3a3abce0c46d)
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/61408869-adc5-4cb5-b7ae-42d489f14599)
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/c7cea1f3-8103-4dfa-81a2-675220572bdc)
+
+  - setup argocd controller
+  - check whether all pods are in running stage now from previous argocd installation
+  - install minikube as per OS (docker desktop or any other virtualisation platform is prerequisite)
+  - start minikube
+
+  - FROM OFFICAL docs of argocd copy basic file and apply
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/4c0e24e9-be60-470e-b2e9-9a3eab27e523)
+  - edit svc to NodePort from ClusterPOrt to access argoCD from our browser
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/a3791eee-a827-4a59-9978-2388e0595f9a)
+
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/c28fc31e-889a-4b20-b9c1-fce94e212af7)
+  - open the ip in your browser
+    -default username is admin, password is base64 encoded by k8s at `kubernetes get secret`
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/d48a78a1-2b7b-483c-9f9c-98d50687ba10)
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/aef46be1-d5a2-4db1-8be1-16d1f5817845)
 
   

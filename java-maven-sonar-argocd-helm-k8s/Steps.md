@@ -2,7 +2,7 @@
 Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Helm and Kubernetes
 
 
-![image](https://github.com/hemu07/CICD-project/assets/90203539/bebf6e54-50d8-4caa-88f8-ca79ba94b968)
+![image](https://github.com/hemu07/CICD-project/assets/90203539/bebf6e54-50d8-4caa-88f8-ca79ba94b968) 
 
 - building the app locally
   ![image](https://github.com/hemu07/CICD-project/assets/90203539/425f3862-b767-4b6e-acb0-01bea94aec8f)

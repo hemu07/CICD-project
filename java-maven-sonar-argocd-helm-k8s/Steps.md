@@ -18,6 +18,7 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
 - install java 11
   ![image](https://github.com/hemu07/CICD-project/assets/90203539/9ad917f6-17b9-41f8-b525-6ca6b4758a58)
 - install jenkins on the instance
+- 
 - setup jenkins admin user
   ![image](https://github.com/hemu07/CICD-project/assets/90203539/dc9935f6-cdb1-48c4-8fb3-ee23673312d0)
   18e66e052b6347f180e6c7f50117ce39
@@ -28,6 +29,19 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
   - Docker Slave Configuration
   - install docker and give jenkins and ubuntu access to docker daemon
   - ![image](https://github.com/hemu07/CICD-project/assets/90203539/93af5b54-973c-4767-90c4-f6fb4ec881b6)
+ 
+  - access sonarqube on port 9000 (admin:admin) is the default username & password
+  - configure jenkins to use sonarqube
+    - go to Myaccount --> security --> generate token -- copy it
+    - ![image](https://github.com/hemu07/CICD-project/assets/90203539/3b89702a-6eae-49cb-9fa9-46155590a511)
+    - add the token in credentials of jenkins
+   
+    - open kubernetes on docker desktop locally -- install argocd controller from operator hub - "https://operatorhub.io/operator/argocd-operator"
+    - ![image](https://github.com/hemu07/CICD-project/assets/90203539/a634b471-37a9-4997-8763-6736fd9ed4b7)
 
+    - start the controller
+      ![image](https://github.com/hemu07/CICD-project/assets/90203539/27913ec3-a484-45ef-9109-a1ad37dd4df6)
+
+- now configure all the CI steps in jenkinsfile
 - create jenkins pipeline (from SCM)
   

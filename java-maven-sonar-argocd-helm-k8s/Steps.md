@@ -24,6 +24,15 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
   18e66e052b6347f180e6c7f50117ce39
 
   - configure maven plugin, install docker pipeline plugin and sonar scanner plugin and restart the jenkins
+  - create sonarqube user (from root user login) and then execute below commands
+      - `apt install unzip
+    wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+    unzip *
+    chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+    chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+    cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+    ./sonar.sh start `
+
   - install sonarqube in the ec2 instance
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/2c2fc6c9-9b56-40f5-a5e0-f1af56fd30b9)
   - Docker Slave Configuration

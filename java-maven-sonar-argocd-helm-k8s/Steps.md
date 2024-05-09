@@ -87,4 +87,6 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
 
    - argocd UI -- create app -- give git repo url and path to manifest file, keep namespace as default and save
      ![image](https://github.com/hemu07/CICD-project/assets/90203539/8f541a97-e973-4750-879a-b6fc257822e4)
+     ![image](https://github.com/hemu07/CICD-project/assets/90203539/543c4a4a-d607-4dea-b600-96d5cc4aaf12)
+
 

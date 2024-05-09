@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: hemu07/ultimate-cicd-pipeline
+        image: replaceImageTag
         ports:
         - containerPort: 8080

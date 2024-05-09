@@ -48,7 +48,8 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
 
     - add the token in credentials of jenkins
    
-    - open kubernetes on docker desktop locally -- install argocd controller from operator hub - "https://operatorhub.io/operator/argocd-operator"
+    - open kubernetes on docker desktop locally -- install OLM from operator hub - "https://operatorhub.io/operator/argocd-operator"
+    - one time installation -- now install argo cd operator
     - ![image](https://github.com/hemu07/CICD-project/assets/90203539/a634b471-37a9-4997-8763-6736fd9ed4b7)
 
     - start the controller
@@ -57,24 +58,33 @@ Jenkins Pipeline for Java-based application using Maven, SonarQube, Argo CD, Hel
   - now configure all the CI steps in jenkinsfile
   - create jenkins pipeline (from SCM)
   - build the CI pipeline & image should be pushed to docker hub repo
-    ![image](https://github.com/hemu07/CICD-project/assets/90203539/c9d45099-367e-4f3e-b7f8-3a3abce0c46d)
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/9e2d0f59-942f-4a7f-a274-9b3f25cd3101)
+
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/61408869-adc5-4cb5-b7ae-42d489f14599)
+
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/c7cea1f3-8103-4dfa-81a2-675220572bdc)
+
 
   - setup argocd controller
   - check whether all pods are in running stage now from previous argocd installation
   - install minikube as per OS (docker desktop or any other virtualisation platform is prerequisite)
   - start minikube
-
+  
   - FROM OFFICAL docs of argocd copy basic file and apply
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/4c0e24e9-be60-470e-b2e9-9a3eab27e523)
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/ffeb5c64-1627-46e2-aaf4-cad7a5fe968a)
+
   - edit svc to NodePort from ClusterPOrt to access argoCD from our browser
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/a3791eee-a827-4a59-9978-2388e0595f9a)
 
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/c28fc31e-889a-4b20-b9c1-fce94e212af7)
   - open the ip in your browser
     -default username is admin, password is base64 encoded by k8s at `kubernetes get secret`
+    ![image](https://github.com/hemu07/CICD-project/assets/90203539/d96a544d-79ba-419f-bb2f-83ccd96842da)
+
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/d48a78a1-2b7b-483c-9f9c-98d50687ba10)
     ![image](https://github.com/hemu07/CICD-project/assets/90203539/aef46be1-d5a2-4db1-8be1-16d1f5817845)
 
-  
+   - argocd UI -- create app -- give git repo url and path to manifest file, keep namespace as default and save
+     ![image](https://github.com/hemu07/CICD-project/assets/90203539/8f541a97-e973-4750-879a-b6fc257822e4)
+
